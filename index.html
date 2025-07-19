@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drink Builder</title>
+  <title>Drink Mixer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="background"></div>
-    <div class="glass"></div>
-    <div class="ingredients">
-      <img src="icecream.png" onclick="dropIngredient('icecream')" />
-      <img src="strawberry.png" onclick="dropIngredient('strawberry')" />
-      <img src="pastry.png" onclick="dropIngredient('pastry')" />
-      <img src="croissant.png" onclick="dropIngredient('croissant')" />
+  <div class="background">
+    <div class="game-container">
+      <div class="glass">
+        <img src="glass.png" alt="Glass Outline" class="glass-img" />
+        <div id="glass-contents"></div>
+      </div>
+      <div class="ingredients">
+        <img src="icecream.png" alt="Ice Cream" onclick="dropIngredient('icecream')" />
+        <img src="strawberry.png" alt="Strawberry" onclick="dropIngredient('strawberry')" />
+        <img src="pastry.png" alt="Pastry" onclick="dropIngredient('pastry')" />
+        <img src="croissant.png" alt="Croissant" onclick="dropIngredient('croissant')" />
+      </div>
     </div>
-    <div class="glass-contents" id="glass-contents"></div>
   </div>
   <script src="script.js"></script>
 </body>
