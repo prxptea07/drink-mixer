@@ -1,12 +1,11 @@
 let stackCount = 0;
 
 function dropIngredient(type) {
-  const img = document.createElement('img');
-  img.src = `${type}.png`;
-  img.classList.add('ingredient');
-
-  const container = document.getElementById('glass-contents');
-  container.appendChild(img);
+  const ingredient = document.createElement('img');
+  ingredient.src = `${type}.png`;
+  ingredient.classList.add('ingredient');
+  document.getElementById('glass-contents').appendChild(ingredient);
+}
 
   stackCount++;
 }
