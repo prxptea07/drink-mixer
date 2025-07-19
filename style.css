@@ -1,72 +1,65 @@
-body, html {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-.background {
-  background: url('background.png') no-repeat center center fixed;
-  background-size: cover;
-  width: 100vw;
+/* Body */
+body {
+  background: url('background.png') no-repeat center center/cover;
   height: 100vh;
+  font-family: 'Pixelify Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.game-container {
+/* Game Container */
+#game {
   position: relative;
-  width: 360px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.glass {
-  position: relative;
-  width: 100%;
-  height: 400px;
-}
-
-.glass-img {
+/* Glass Image */
+#glass {
   position: absolute;
-  width: 100%;
-  height: auto;
+  bottom: 0;
+  width: 200px;
+  z-index: 1;
+}
+
+/* Ingredient Panel */
+#ingredients {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   z-index: 2;
 }
 
-#glass-contents {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
 .ingredient {
-  width: 80px;
-  position: relative;
-  animation: drop 0.6s ease-out forwards;
-}
-
-@keyframes drop {
-  0% { transform: translateY(-100px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.ingredients {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-.ingredients img {
   width: 60px;
+  height: 60px;
   cursor: pointer;
   transition: transform 0.2s;
 }
 
-.ingredients img:hover {
+.ingredient:hover {
   transform: scale(1.1);
+}
+
+/* Falling Items */
+.falling {
+  position: absolute;
+  width: 50px;
+  transition: top 0.5s linear;
+  z-index: 3;
 }
