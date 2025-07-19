@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drink Mixer</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="background">
-    <div class="game-container">
-      <div class="glass">
-        <img src="glass.png" alt="Glass Outline" class="glass-img" />
-        <div id="glass-contents"></div>
-      </div>
-      <div class="ingredients">
-        <img src="icecream.png" alt="Ice Cream" onclick="dropIngredient('icecream')" />
-        <img src="strawberry.png" alt="Strawberry" onclick="dropIngredient('strawberry')" />
-        <img src="pastry.png" alt="Pastry" onclick="dropIngredient('pastry')" />
-        <img src="croissant.png" alt="Croissant" onclick="dropIngredient('croissant')" />
-      </div>
-    </div>
+<div class="game-container">
+  <img src="background.png" class="background-img" alt="Background" />
+  <div class="glass">
+    <img src="glass.png" class="glass-outline" alt="Glass" />
+    <div id="glass-contents"></div>
   </div>
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="menu">
+    <img src="strawberry.png" onclick="dropIngredient('strawberry')" />
+    <img src="croissant.png" onclick="dropIngredient('croissant')" />
+    <img src="pastry.png" onclick="dropIngredient('pastry')" />
+    <img src="icecream.png" onclick="dropIngredient('icecream')" />
+  </div>
+</div>
+
